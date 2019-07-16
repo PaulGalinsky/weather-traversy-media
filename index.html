@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<title>WeatherJS</title>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
+				<h1 id="w-location"></h1>
+				<h3 class="text-dark" id="w-desc"></h3>
+				<h3 id="w-string"></h3>
+				<img id="w-icon">
+				<ul class="list-group mt-3" id="w-details">
+					<li class="list-group-item" id="w-humidity"></li>
+					<li class="list-group-item" id="w-pressure"></li>
+					<li class="list-group-item" id="w-wind-speed"></li>
+					<li class="list-group-item" id="w-wind-direction"></li>
+				</ul>
+				<hr>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#locModal">
+						Change Location
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="locModal" tabindex="-1" role="dialog" aria-labelledby="locModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="locModalLabel">Choose location</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="w-form">
+							<div class="form-group">
+								<label for="city">City</label>
+								<input type="text" id="city" class="form-control">
+							</div>
+							<div class="form-group">
+								<label for="countryCode">Country Code</label>
+								<input type="text" id="countryCode" class="form-control">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" id="w-change-btn" class="btn btn-primary">Save changes</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="storage.js"></script>
+<script src="weather.js"></script>
+<script src="ui.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+<!-- OpenWeatherMap.org
+
+1de1cdc243da11f9c4350e94e96cbf5e
+
+http://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=1de1cdc243da11f9c4350e94e96cbf5e -->
