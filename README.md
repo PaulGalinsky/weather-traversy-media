@@ -1,5 +1,5 @@
 # WeatherTraversyMedia
-This is an updated WeatherJS API project, from the Traversy Media Modern JavaScript From The Beginning course. It uses an alternate API, provided by openweathermap.org as the API used in the lectures has closed down.
+I'm sharing this updated WeatherJS API project, from the Traversy Media Modern JavaScript From The Beginning course, because the API used in the lectures has closed down. This version uses an alternate API, provided by openweathermap.org.
 
 Please do register for your own API key, don't just re-use mine, as there are only 60 API calls available per minute on a free subscription! Note that once you've requested an API key, it will take around an hour for it to be emailed to you. Your key should be inserted into line 3 of weather.js (this.apiKey = 'xxxxxxxx';)
 
